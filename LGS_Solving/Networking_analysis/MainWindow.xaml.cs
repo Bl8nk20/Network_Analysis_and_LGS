@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LGS_Solving_Libary;
 
 namespace Networking_analysis
 {
@@ -24,5 +25,6 @@ namespace Networking_analysis
         {
             InitializeComponent();
         }
+
     }
 }
