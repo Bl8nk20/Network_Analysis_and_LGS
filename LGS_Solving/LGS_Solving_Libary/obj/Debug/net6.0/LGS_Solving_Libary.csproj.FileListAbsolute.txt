@@ -1,0 +1,12 @@
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\bin\Debug\net6.0\LGS_Solving_Libary.deps.json
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\bin\Debug\net6.0\LGS_Solving_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\bin\Debug\net6.0\LGS_Solving_Libary.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.csproj.AssemblyReference.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.GeneratedMSBuildEditorConfig.editorconfig
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.AssemblyInfoInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.AssemblyInfo.cs
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.csproj.CoreCompileInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\refint\LGS_Solving_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\LGS_Solving_Libary.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\LGS_Solving_Libary\obj\Debug\net6.0\ref\LGS_Solving_Libary.dll
