@@ -6,66 +6,57 @@ using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LGS_Solving_Libary
+namespace LGS_Solving_Libary;
+
+/// <summary>
+/// An interface, to collect the data from the User_Interface / Input
+/// </summary>
+public interface IDataProvider<T>
 {
-    public class Data_Gathering
+    double[,] A_Matrix_Creating();
+    double[] B_Vector_Creating();
+}
+
+/// <summary>
+/// a Class to Collect every data needed / Resistances & Voltages
+/// </summary>
+public class Data_Gathering : IDataProvider<double>
+{
+    // Initializing Fields
+    private readonly double[] _B_Vector_Values;
+    private readonly double[,] A_Matrix_Values;
+    private readonly double[] _creating_from_Matrix_array;
+    
+    /// <summary>
+    /// a constructor to calculate / set the arrays / Vectors / Matrix
+    /// </summary>
+    /// <param name="Uq1"> Source VOltage -> User_Input</param>
+    public Data_Gathering(double[] B_Vector_Values, double[] creating_from_Matrix_array)
     {
-        //
-        private readonly string _filename;
-        private readonly double _R4x;
-        private readonly double _Uq1;
-        private readonly double[,] _resistances_matrix;
-        private readonly Vector<double> currents;
-        private readonly Vector<double> voltages;
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="filename"></param>
-        /// <param name="R4x"></param>
-        /// <param name="Uq1"></param>
-        public Data_Gathering(string filename, double R4x, double Uq1)
-        {
-            _filename = filename;
-            _R4x = R4x;
-            _Uq1 = Uq1;
-            _resistances_matrix = Resistance_Matrix();
-            currents = Calculated_Currents();
-            voltages = Source_Voltages();
-        }
+        _B_Vector_Values = B_Vector_Values;
+        _creating_from_Matrix_array = creating_from_Matrix_array;
+    }
 
-        /// <summary>
-        /// method for collecting the data in a 2d array
-        /// </summary>
-        /// <returns></returns>
-        public double[,] Resistance_Matrix()
-        {
-            double [,] data = new double[1,1];
+    /// <summary>
+    /// method for collecting the data in a 2d array / matrix
+    /// </summary>
+    /// <returns>-> a 2d array / matrix</returns>
+    public double[,] A_Matrix_Creating()
+    {
+        _ = _creating_from_Matrix_array;
+        double [,] data = new double[3,3];
 
-            return data;
-        }       
+        return data;
+    }       
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public Vector<double> Source_Voltages()
-        {
-            Vector<double> voltages = new Vector<double>();
+    /// <summary>
+    /// A method to get an array / Vector of the Source Voltages
+    /// </summary>
+    /// <returns> -> an array of voltages</returns>
+    public double[] B_Vector_Creating()
+    {
+        double[] b_Vector = new double[2];
 
-            return voltages;
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public Vector<double> Calculated_Currents()
-        {
-            Vector<double> currents = new Vector<double>();
-
-            return currents;
-        }
+        return b_Vector;
     }
 }

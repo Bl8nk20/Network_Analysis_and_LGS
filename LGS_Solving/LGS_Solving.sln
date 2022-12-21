@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGS_Solving_Libary", "LGS_Solving_Libary\LGS_Solving_Libary.csproj", "{503550B3-CC37-4DA5-A9FB-B0F086020137}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LGS_Solving_Libary", "LGS_Solving_Libary\LGS_Solving_Libary.csproj", "{503550B3-CC37-4DA5-A9FB-B0F086020137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networking_analysis", "Networking_analysis\Networking_analysis.csproj", "{E4BC361B-1BCA-4BFB-9978-357FF9C63909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Networking_analysis", "Networking_analysis\Networking_analysis.csproj", "{E4BC361B-1BCA-4BFB-9978-357FF9C63909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kirchhoff_Libary", "Kirchhoff\Kirchhoff_Libary.csproj", "{B409F38E-A990-4432-8F4C-6DD828B7A9CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E4BC361B-1BCA-4BFB-9978-357FF9C63909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4BC361B-1BCA-4BFB-9978-357FF9C63909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4BC361B-1BCA-4BFB-9978-357FF9C63909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B409F38E-A990-4432-8F4C-6DD828B7A9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B409F38E-A990-4432-8F4C-6DD828B7A9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B409F38E-A990-4432-8F4C-6DD828B7A9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B409F38E-A990-4432-8F4C-6DD828B7A9CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
