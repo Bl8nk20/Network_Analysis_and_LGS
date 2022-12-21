@@ -7,12 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        <Rectangle Height="20" Canvas.Left="184" Stroke="Black" Canvas.Top="77" Width="71"/>
+        <Rectangle Height="20" Canvas.Left="184" Stroke="Black" Canvas.Top="77" Width="71" MouseLeftButtonDown="Show_Values" MouseLeftButtonUp="Hide_Values" TargetUpdated="Update_Values"/>
         <Rectangle Height="71" Canvas.Left="354" Stroke="Black" Canvas.Top="106" Width="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Rectangle Height="71" Canvas.Left="354" Stroke="Black" Canvas.Top="285" Width="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Rectangle Height="71" Canvas.Left="576" Stroke="Black" Canvas.Top="106" Width="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Rectangle Height="71" Canvas.Left="576" Stroke="Black" Canvas.Top="285" Width="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Rectangle Height="20" Canvas.Left="443" Stroke="Black" Canvas.Top="207" Width="71" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <CheckBox Content="Live Anzeige" Canvas.Left="27" Canvas.Top="25" Checked="CheckBox_Checked"/>
+        <Line X1="184" Y1="87" X2="100" Y2="87" Stroke="Black"/>
+        <Line X1="254" Y1="87" X2="586" Y2="87" Stroke="Black"/>
+        <Line X1="586" Y1="106" X2="586" Y2="87" Stroke="Black"/>
+
     </Canvas>
 
 </Window>

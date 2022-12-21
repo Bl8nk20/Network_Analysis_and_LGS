@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "Kirchhoff_Libary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Kirchhoff_Libary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kirchhoff_Libary.dll": {}
+        }
+      },
       "LGS_Solving_Libary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "Kirchhoff_Libary/1.0.0": {
+      "type": "project",
+      "path": "../Kirchhoff/Kirchhoff_Libary.csproj",
+      "msbuildProject": "../Kirchhoff/Kirchhoff_Libary.csproj"
+    },
     "LGS_Solving_Libary/1.0.0": {
       "type": "project",
       "path": "../LGS_Solving_Libary/LGS_Solving_Libary.csproj",
@@ -23,6 +38,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Kirchhoff_Libary >= 1.0.0",
       "LGS_Solving_Libary >= 1.0.0"
     ]
   },
@@ -58,6 +74,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+            "C:\\#Moritz\\#Ausbildungsskripte\\1.Lehrjahr\\LGS_Solving\\Kirchhoff\\Kirchhoff_Libary.csproj": {
+              "projectPath": "C:\\#Moritz\\#Ausbildungsskripte\\1.Lehrjahr\\LGS_Solving\\Kirchhoff\\Kirchhoff_Libary.csproj"
+            },
             "C:\\#Moritz\\#Ausbildungsskripte\\1.Lehrjahr\\LGS_Solving\\LGS_Solving_Libary\\LGS_Solving_Libary.csproj": {
               "projectPath": "C:\\#Moritz\\#Ausbildungsskripte\\1.Lehrjahr\\LGS_Solving\\LGS_Solving_Libary\\LGS_Solving_Libary.csproj"
             }

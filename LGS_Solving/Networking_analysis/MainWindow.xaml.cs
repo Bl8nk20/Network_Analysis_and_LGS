@@ -14,17 +14,39 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LGS_Solving_Libary;
 
-namespace Networking_analysis
+namespace Networking_analysis;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    // Initialize
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
+
+    // Debugging
+    public readonly double Uq1 = 12;
+
+    private void CheckBox_Checked(object sender, RoutedEventArgs e)
+    {
+        IDataProvider<double> provider = new Data_Gathering(Uq1: Uq1);
+    }
+
+    private void Show_Values(object sender, MouseButtonEventArgs e)
+    {
+        
+    }
+
+    private void Hide_Values(object sender, MouseButtonEventArgs e)
+    {
+
+    }
+
+    private void Update_Values(object sender, DataTransferEventArgs e)
+    {
 
     }
 }
