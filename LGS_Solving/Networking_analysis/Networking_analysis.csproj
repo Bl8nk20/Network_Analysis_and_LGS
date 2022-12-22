@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Electrical_Components\Electrical_Components_Libary.csproj" />
     <ProjectReference Include="..\Kirchhoff\Kirchhoff_Libary.csproj" />
     <ProjectReference Include="..\LGS_Solving_Libary\LGS_Solving_Libary.csproj" />
   </ItemGroup>

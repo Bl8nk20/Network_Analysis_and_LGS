@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LGS_Solving_Libary;
+using LGS_Solving_Libary.Data_Stuff;
+using LGS_Solving_Libary.Interfaces;
+using Networking_analysis.Gui_Data;
+using IManipulator = LGS_Solving_Libary.Interfaces.IManipulator;
 
 namespace Networking_analysis;
 
@@ -21,18 +25,20 @@ namespace Networking_analysis;
 /// </summary>
 public partial class MainWindow : Window
 {
+
     // Initialize
     public MainWindow()
     {
         InitializeComponent();
     }
 
-    // Debugging
-    public readonly double Uq1 = 12;
 
     private void CheckBox_Checked(object sender, RoutedEventArgs e)
     {
-        IDataProvider<double> provider = new Data_Gathering(Uq1: Uq1);
+        Data_Gathering_WPF dataProviding = new Data_Gathering_WPF();
+        IDataProvider provider = new Data_Gathering(dataProviding.calling_User_inputs_No1());
+        IManipulator manipulator = new Data_Manipulation(dataProviding.calling_User_inputs_No1(), dataProviding.calling_User_inputs_No2());
+        Main_Interface LES_solving = new Main_Interface( provider, manipulator);
     }
 
     private void Show_Values(object sender, MouseButtonEventArgs e)
