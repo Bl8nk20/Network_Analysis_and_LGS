@@ -1,0 +1,17 @@
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\bin\Debug\net6.0-windows\Electrical_Components_Libary.deps.json
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\bin\Debug\net6.0-windows\Electrical_Components_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\bin\Debug\net6.0-windows\Electrical_Components_Libary.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.csproj.AssemblyReference.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary_MarkupCompile.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary_MarkupCompile.lref
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Themes\Generic.baml
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.g.resources
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.GeneratedMSBuildEditorConfig.editorconfig
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.AssemblyInfoInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.AssemblyInfo.cs
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.csproj.CoreCompileInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\refint\Electrical_Components_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\Electrical_Components_Libary.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Electrical_Components\obj\Debug\net6.0-windows\ref\Electrical_Components_Libary.dll
