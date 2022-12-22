@@ -1,4 +1,6 @@
-﻿namespace LGS_Solving_Libary;
+﻿using LGS_Solving_Libary.Data_Stuff;
+
+namespace LGS_Solving_Libary;
 
 /// <summary>
 /// A class for the main Interface of the Libary
@@ -6,15 +8,15 @@
 public class Main_Interface
 {
     // initializing fields
-    private readonly IDataProvider<double> _dataProvider;
-    private readonly IManipulator<double, double> _manipulator;
+    private readonly Interfaces.IDataProvider _dataProvider;
+    private readonly Interfaces.IManipulator _manipulator;
 
     /// <summary>
     /// Constructor for the main Logic
     /// </summary>
     /// <param name="dataProvider">-> Data Gathering -> setting everything up</param>
     /// <param name="manipulator">-> Data Manipulation -> calculations</param>
-    public Main_Interface(IDataProvider<double> dataProvider, IManipulator<double, double> manipulator)
+    public Main_Interface(Interfaces.IDataProvider dataProvider, Interfaces.IManipulator manipulator)
     {
         _dataProvider = dataProvider;
         _manipulator = manipulator;
@@ -23,8 +25,10 @@ public class Main_Interface
     /// <summary>
     /// Basic Logic for the Libary
     /// </summary>
-    public void Process()
+    public double[] Process()
     {
+        double[] calculations_done = _manipulator.calculating();
 
+        return calculations_done;
     }
 }
