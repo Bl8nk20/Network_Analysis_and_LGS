@@ -17,7 +17,8 @@ internal class LGS_Gauß : Interfaces.ISolving_Gauss
     private readonly double[] _vector_b;
     private readonly double[,] _matrix;
     private readonly int _index;
-    private readonly double[] _vector_x;
+    private readonly int _rows;
+    private readonly int _cols;
 
     /// <summary>
     /// a Class to calculate a LE using the Gaussian Elimination Method (A * x = b)
@@ -29,7 +30,8 @@ internal class LGS_Gauß : Interfaces.ISolving_Gauss
         _vector_b = vector_b;
         _matrix = Gaussian_Elimination_Matrix(matix);
         _index = vector_b.Length;
-        _vector_x = Back_Substitution_for_vector_x();
+        _rows = _matrix.GetLength(0);
+        _cols = _matrix.GetLength(1);
     }
 
     /// <summary>
@@ -85,19 +87,16 @@ internal class LGS_Gauß : Interfaces.ISolving_Gauss
     /// <returns>a vector with calculated current values</returns>
     public double[] Back_Substitution_for_vector_x()
     {
-        double[] vector_x = new double[_vector_b.Length];
+        double[] vector_x = new double[_rows];
 
-        // Loop through each variable, starting with the last one 
-        for (int i = _index; i >= 0; i--)
+        for(int i = _rows - 1; i >= 0; i--)
         {
-            // Sum up the products of the coefficiants and the known variables
-            double sum = 0;
-            for (int j = i + 1; i < _index; j++)
+            double sum = 0.0;
+            for(int j = i + 1; j < _rows; j++)
             {
-                sum += _matrix[i, j] * vector_x[j];
+                sum = sum + _matrix[i, j] * vector_x[j];
             }
-            // Solve for the current one
-            vector_x[i] = (_vector_b[i] - sum) / _matrix[i, i];
+            vector_x[i] = (_matrix[i, _cols - 1] - sum) / _matrix[i, i];
         }
 
         return vector_x;
