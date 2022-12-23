@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Media3D;
 
 namespace Networking_analysis.Gui_Data;
 
 internal class Data_Gathering_WPF
 {
-    public double[] calling_User_inputs_No1()
+    User_Inputs User_Inputs = new User_Inputs();
+    
+    public double[] resistances_array
     {
-        double[] resistances = { 15, 5, -5, 5, 20, 10, -5, 10, 20 };
-        return resistances;
+        get { return User_Inputs.calling_User_inputs_Resistors(); }
     }
-
-    public double[] calling_User_inputs_No2()
+    public double[] voltages_array
     {
-        double[] Voltages = { 12, 0, 0 };
-        return Voltages;
+        get { return User_Inputs.calling_User_inputs_Voltages(); }
     }
 }
+ 
