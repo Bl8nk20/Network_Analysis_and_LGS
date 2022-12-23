@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kirchhoff_Libary.CalculationStuff;
 
-internal class Kirchhoff_Laws
+public class Kirchhoff_Laws
 {
     // Initializing fields
     private readonly double[] _currents_array;
