@@ -1,6 +1,6 @@
 namespace LES_Solving;
 
-public interface IDataManipulator<out AV>
+public interface IDataManipulator<out TV>
 {
-    AV Calculating_Result();
+    TV Calculating_Result();
 }

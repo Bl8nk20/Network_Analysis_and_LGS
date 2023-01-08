@@ -13,19 +13,41 @@ public class DataProvider : IDataGathering<double[,]>
         _array_for_matrix_gen = array_for_matrix;
     }
     
-    
     public int num_of_Rows()
     {
-        return new int();
+        return (int)Math.Sqrt(_array_for_matrix_gen.Length);
     }
 
+    bool IsPerfectSquare()
+    {
+        double sqrt = Math.Sqrt(_numRows);
+        return sqrt == (int)sqrt;
+    }
+    
     public int num_of_Cols()
     {
-        return new int();
+        int cols = _numRows;
+        
+        if (!IsPerfectSquare())
+        {
+            cols = _array_for_matrix_gen.Length / _numRows;
+        }
+
+        return cols;
     }
     
     public double[,] getting_matrix_from_Vector()
     {
+        double[,] matrix = new double[_numRows, _numCols];
+        int index = 0;
+        for (int i = 0; i < _numRows + 1; i++)
+        {
+            for (int j = 0; j < _numCols + 1; j++)
+            {
+                matrix[i, j] = _array_for_matrix_gen[index];
+                index++;
+            }
+        }
         return new double[_numRows,_numCols];
     }
 }
