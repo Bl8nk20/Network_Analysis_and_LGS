@@ -1,0 +1,12 @@
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\bin\Debug\net6.0\Data_Read_and_Write.deps.json
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\bin\Debug\net6.0\Data_Read_and_Write.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\bin\Debug\net6.0\Data_Read_and_Write.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.csproj.AssemblyReference.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.GeneratedMSBuildEditorConfig.editorconfig
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.AssemblyInfoInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.AssemblyInfo.cs
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.csproj.CoreCompileInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\refint\Data_Read_and_Write.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\Data_Read_and_Write.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Data_Read_and_Write\obj\Debug\net6.0\ref\Data_Read_and_Write.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ddTa2mrKMyYwCsECYNCVxMjnLRWtiOuB6F3gTmx3WMu36dIU5b+l+40vPnt9MxLYm5huvd6ETeFRlu58T5gPyw==",
+  "success": true,
+  "projectFilePath": "C:\\#Moritz\\#Ausbildungsskripte\\1.Lehrjahr\\LGS_Solving\\Data_Read_and_Write\\Data_Read_and_Write.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ms85866\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
