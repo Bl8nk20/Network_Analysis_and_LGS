@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "LGS_Solving_Libary/1.0.0": {
+        "runtime": {
+          "LGS_Solving_Libary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LGS_Solving_Libary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

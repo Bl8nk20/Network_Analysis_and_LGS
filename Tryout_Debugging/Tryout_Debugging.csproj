@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data_Read_and_Write\Data_Read_and_Write.csproj" />
+    <ProjectReference Include="..\Kirchhoff\Kirchhoff_Libary.csproj" />
+    <ProjectReference Include="..\LGS_Solving_Libary\LGS_Solving_Libary.csproj" />
+  </ItemGroup>
+
+</Project>

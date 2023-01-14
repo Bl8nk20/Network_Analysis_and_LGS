@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6I6iOHXeiNCRkwFI/sEN+u3q/3J7+nyoDWd+ikTtB3Gshpev+MhbF+SGHXMKcQGEuRrbG2521VS+fMT/ztmHyg==",
+  "success": true,
+  "projectFilePath": "C:\\#Moritz\\#Ausbildungsskripte\\1.Lehrjahr\\LGS_Solving\\Tryout_Debugging\\Tryout_Debugging.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ms85866\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

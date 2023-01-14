@@ -1,0 +1,12 @@
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\bin\Debug\net6.0\Kirchhoff_Libary.deps.json
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\bin\Debug\net6.0\Kirchhoff_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\bin\Debug\net6.0\Kirchhoff_Libary.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.csproj.AssemblyReference.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.GeneratedMSBuildEditorConfig.editorconfig
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.AssemblyInfoInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.AssemblyInfo.cs
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.csproj.CoreCompileInputs.cache
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\refint\Kirchhoff_Libary.dll
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\Kirchhoff_Libary.pdb
+C:\#Moritz\#Ausbildungsskripte\1.Lehrjahr\LGS_Solving\Kirchhoff\obj\Debug\net6.0\ref\Kirchhoff_Libary.dll
