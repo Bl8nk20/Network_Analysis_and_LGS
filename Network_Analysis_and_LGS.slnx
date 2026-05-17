@@ -2,12 +2,10 @@
   <Folder Name="/src/">
     <Project Path="src/DataReading/DataReading.csproj" />
     <Project Path="src/DataWriting/DataWriting.csproj" />
+    <Project Path="src/ElectricalComponents/ElectricalComponents.csproj" />
   </Folder>
   <Folder Name="/src/Maths/">
     <Project Path="src/Maths/Graph/Graph.csproj" />
     <Project Path="src/Maths/LinAlgebra/LinAlgebra.csproj" />
-  </Folder>
-  <Folder Name="/src/shared/">
-    <Project Path="src/shared/ElectricalComponents/ElectricalComponents.csproj" />
   </Folder>
 </Solution>
