@@ -2,23 +2,33 @@ using Network_Analysis_and_LGS.ElectricalComponents.Interfaces;
 
 namespace Network_Analysis_and_LGS.ElectricalComponents.Implementations;
 
-public class Wire : Interfaces.IWire
+public class Wire : IWire
 {
-    private double _resistance { get; set; }
-    private double _area { get; set; }
-    private double _length { get; set; }
+    private double _length;
+    private double _crossSectionArea;
+    private double _resistivity; // Material-spezifisch
 
-    public Wire()
+    public double Length
     {
-        _resistance = 0;
-        _area = 2.5;
-        _length = 1.0;
-    }
-    public Wire(double resistance, double area = 2.5, double length = 1.0)
-    {
-        _resistance = resistance;
-        _area = area;
-        _length = length;
+        get => _length;
+        set => _length = value > 0 ? value : throw new ArgumentException("Length must be positive");
     }
 
+    public double CrossSectionArea
+    {
+        get => _crossSectionArea;
+        set => _crossSectionArea = value > 0 ? value : throw new ArgumentException("Area must be positive");
+    }
+
+    public Wire(double length, double crossSectionArea, double resistivity = 0.0175)
+    {
+        Length = length;
+        CrossSectionArea = crossSectionArea;
+        _resistivity = resistivity;
+    }
+
+    /// <summary>
+    /// Calculates resistance using R = ρ * L / A
+    /// </summary>
+    public double GetResistance() => _resistivity * Length / CrossSectionArea;
 }
