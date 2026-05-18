@@ -6,71 +6,73 @@ namespace Network_Analysis_and_LGS.ElectricalComponents.Implementations;
 
 public class BaseResistor : Interfaces.IBaseResistor
 {
-    private readonly IValidator _validator = new ResistanceValidator();
+    private readonly IValidator _validator;
+    private double _resistance = 0.0;
+    private SignificantFigures[] _firsttwoBands = Array.Empty<SignificantFigures>();
+    private Multiplier _thirdBand = Multiplier.Black;
+    private Tolerance _fourthBand = Tolerance.Brown;
+    private AllowedVoltage _fifthBand = AllowedVoltage.NoColor;
+    private TempCoefficient _sixthBand = TempCoefficient.Grey;
 
-    double _resistance { get; set; }
-    Enums.SignificantFigures[] _firsttwoBands 
-    { 
-        get;
-        set
-        {
-           _firsttwoBands = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for first two bands"); 
-        } 
-    }
-    Enums.Multiplier _thirdBand 
-    { 
-        get;
-        set
-        {
-            _thirdBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for third band");
-        }
-    }
-    Enums.Tolerance _fourthBand 
-    { 
-        get;
-        set
-        {
-            _fourthBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for fourth band");
-        }
-    }
-    
-    Enums.AllowedVoltage _fifthBand 
-    { 
-        get;
-        set
-        {
-            _fifthBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for fifth band");
-        }
-    }
-    Enums.TempCoefficient _sixthBand 
-    { 
-        get;
-        set
-        {
-            _sixthBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for sixth band");
-        }
-    }
-
-    public BaseResistor()
+    public SignificantFigures[] FirstTwoBands
     {
-
+        get => _firsttwoBands;
+        set => _firsttwoBands = ValidateOrThrow<SignificantFigures[]>(value, "First two bands invalid");
     }
 
-    public BaseResistor(string AlphanumericalCode)
+    public Multiplier ThirdBand
     {
+        get => _thirdBand;
+        set => _thirdBand = ValidateOrThrow<Multiplier>(value, "Third band invalid");
     }
 
-    public BaseResistor(double resistance)
+    public Tolerance FourthBand
     {
+        get => _fourthBand;
+        set => _fourthBand = ValidateOrThrow<Tolerance>(value, "Fourth band invalid");
+    }
+
+    public AllowedVoltage FifthBand
+    {
+        get => _fifthBand;
+        set => _fifthBand = ValidateOrThrow<AllowedVoltage>(value, "Fifth band invalid");
+    }
+
+    public TempCoefficient SixthBand
+    {
+        get => _sixthBand;
+        set => _sixthBand = ValidateOrThrow<TempCoefficient>(value, "Sixth band invalid");
+    }
+
+    public double Resistance    {
+        get => _resistance;
+        set => _resistance = ValidateOrThrow<double>(value, "Resistance value invalid");
+    }
+
+    public BaseResistor(IValidator validator)
+    {
+        _validator = validator;
+    }
+
+    public BaseResistor(IValidator validator, string alphanumericalCode)
+    {
+        _validator = validator;
+    }
+
+    public BaseResistor(IValidator validator, double resistance)
+    {
+        _validator = validator;
         _resistance = resistance;
     }
 
-    public BaseResistor(Enums.SignificantFigures[] firsttwoBands,
+    public BaseResistor(IValidator validator, 
+                        Enums.SignificantFigures[] firsttwoBands,
                         Enums.Multiplier thirdBand, 
                         Enums.Tolerance fourthBand, 
                         Enums.AllowedVoltage fifthBand = Enums.AllowedVoltage.NoColor, 
                         Enums.TempCoefficient sixthBand = Enums.TempCoefficient.Grey)
     {
+        _validator = validator; 
         _firsttwoBands = firsttwoBands;
         _thirdBand = thirdBand;
         _fourthBand = fourthBand;
@@ -79,8 +81,13 @@ public class BaseResistor : Interfaces.IBaseResistor
     }
 
     #region Private Methods
-    private void calculateResistanceAlphaNumerical(string alphanumericalCode){
-
+        
+    private T ValidateOrThrow<T>(T value, string message)
+    {
+        if (!_validator.Validate(value))
+            throw new ArgumentException(message);
+        return value;
     }
+
     #endregion
 }
