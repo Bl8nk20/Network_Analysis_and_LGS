@@ -10,64 +10,59 @@ public class BaseResistor : Interfaces.IBaseResistor
 
     double _resistance { get; set; }
     Enums.SignificantFigures[] _firsttwoBands 
-    { get;
-      set{
-        if (_validator.Validate(value)){
-            _firsttwoBands = value;
-        }
-        else
+    { 
+        get;
+        set
         {
-            throw new ArgumentException("Invalid value for first two bands");
-        }
-    }
+           _firsttwoBands = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for first two bands"); 
+        } 
     }
     Enums.Multiplier _thirdBand 
-    { get;
-      set{
-        if (_validator.Validate(value)){
-            _thirdBand = value;
-        }
-        else
+    { 
+        get;
+        set
         {
-            throw new ArgumentException("Invalid value for third band");
+            _thirdBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for third band");
         }
-    }
     }
     Enums.Tolerance _fourthBand 
-    { get;
-      set{
-        if (_validator.Validate(value)){
-            _fourthBand = value;
-        }
-        else
+    { 
+        get;
+        set
         {
-            throw new ArgumentException("Invalid value for fourth band");
+            _fourthBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for fourth band");
         }
     }
-    } 
+    
     Enums.AllowedVoltage _fifthBand 
-    { get;
-      set{
-        if (_validator.Validate(value)){
-            _fifthBand = value;
-        }
-        else
+    { 
+        get;
+        set
         {
-            throw new ArgumentException("Invalid value for fifth band");
+            _fifthBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for fifth band");
         }
-    }
     }
     Enums.TempCoefficient _sixthBand 
-    { get;
-      set {
-        if (_validator.Validate(value)){
-            _sixthBand = value;
-        }
-        else
+    { 
+        get;
+        set
         {
-            throw new ArgumentException("Invalid value for sixth band");
+            _sixthBand = _validator.Validate(value) ? value : throw new ArgumentException("Invalid value for sixth band");
         }
     }
+
+    public BaseResistor()
+    {
+
+    }
+
+    public BaseResistor(string AlphanumericalCode)
+    {
+    }
+
+    public BaseResistor(double resistance)
+    {
+        _resistance = resistance;
     }
 
     public BaseResistor(Enums.SignificantFigures[] firsttwoBands,
@@ -82,30 +77,6 @@ public class BaseResistor : Interfaces.IBaseResistor
         _fifthBand = fifthBand;
         _sixthBand = sixthBand;
     }
-
-    public BaseResistor(string AlphanumericalCode)
-    {
-    }
-
-    public BaseResistor(double resistance)
-    {
-        _resistance = resistance;
-    }
-
-    #region Public Methods
-    public double CalculateResistanceAlphaNumerical(string alphanumericalCode){
-        throw new NotImplementedException();
-    }
-
-    public double CalculateResistanceColorCode(Enums.SignificantFigures[] firsttwoBands,
-                                                    Enums.Multiplier thirdBand, 
-                                                    Enums.Tolerance fourthBand, 
-                                                    Enums.AllowedVoltage fifthBand = Enums.AllowedVoltage.NoColor, 
-                                                    Enums.TempCoefficient sixthBand = Enums.TempCoefficient.Grey){
-        throw new NotImplementedException();
-    }
-
-    #endregion
 
     #region Private Methods
     private void calculateResistanceAlphaNumerical(string alphanumericalCode){
