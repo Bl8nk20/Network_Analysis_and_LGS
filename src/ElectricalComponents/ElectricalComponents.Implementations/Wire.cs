@@ -4,6 +4,10 @@ namespace Network_Analysis_and_LGS.ElectricalComponents.Models;
 
 public class Wire : IWire
 {
+
+    private double _resistance { get; set; }
+    private double _area { get; set; }
+    private double _length { get; set; }
     public string ID { get; }
 
     private double _length;
