@@ -8,6 +8,7 @@ Ziel ist es, das Projekt flexibler, moderner und sauberer neu zu schreiben.
 Das Projekt habe ich initial in meinem zweiten Ausbildungsjahr geschrieben.
 Das Projekt konnte aus einem fest vorgeschriebenen Netzwerk feststellen, ob dieses gelöst werden konnte oder nicht.
 Dafür habe ich etwas über zwei Monate gebraucht, um mir C#, Elektro-/Netzwerktechnik anzuschauen.
+Es war ein eher hardgecodeter ansatz, ohne viel Flexibilität oder Erweiterbarkeit.
 
 ## Zielsetzung
 
@@ -33,6 +34,12 @@ Hier liste ich alle Design-Patterns auf, die ich verwende mit einer kleinen Begr
 ### Unterprojekte / Libraries
 
 Hier liste ich die Untergliederung der einzelnen Libraries auf, in die ich das "Hauptprojekt" unterteilt habe
+
+* Graph
+* ElectricalComponents
+* DataReading
+* DataWriting
+* Maths
 
 ## Zukunftsmusik
 
