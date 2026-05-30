@@ -4,6 +4,8 @@ namespace Network_Analysis_and_LGS.ElectricalComponents.Models;
 
 public class Wire : IWire
 {
+    public string ID { get; }
+
     private double _length;
     private double _crossSectionArea;
     private double _resistivity; // Material-spezifisch

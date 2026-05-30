@@ -12,6 +12,8 @@ public class BaseResistor : IBaseResistor
     private Tolerance _fourthBand = Tolerance.Brown;
     private AllowedVoltage _fifthBand = AllowedVoltage.NoColor;
     private TempCoefficient _sixthBand = TempCoefficient.Grey;
+    public string ID { get; }
+
 
     public SignificantFigures[] FirstTwoBands
     {
