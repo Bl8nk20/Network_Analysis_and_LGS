@@ -10,7 +10,6 @@ public class Wire : IWire
     private double _length { get; set; }
     public string ID { get; }
 
-    private double _length;
     private double _crossSectionArea;
     private double _resistivity; // Material-spezifisch
 
