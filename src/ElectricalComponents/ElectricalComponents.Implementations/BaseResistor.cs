@@ -7,6 +7,8 @@ namespace Network_Analysis_and_LGS.ElectricalComponents.Implementations;
 public class BaseResistor : Interfaces.IBaseResistor
 {
     private readonly IValidator _validator = new ResistanceValidator();
+    public string ID { get; }
+
 
     double _resistance { get; set; }
     Enums.SignificantFigures[] _firsttwoBands 

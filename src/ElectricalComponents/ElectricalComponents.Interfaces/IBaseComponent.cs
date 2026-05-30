@@ -1,6 +1,7 @@
 namespace Network_Analysis_and_LGS.ElectricalComponents.Interfaces
 {
-    interface IBaseResistor : IBaseComponent
+    public interface IBaseComponent
     {
+        public string ID { get; }
     }
 }

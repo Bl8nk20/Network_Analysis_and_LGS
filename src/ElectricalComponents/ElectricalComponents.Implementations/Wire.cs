@@ -7,6 +7,8 @@ public class Wire : Interfaces.IWire
     private double _resistance { get; set; }
     private double _area { get; set; }
     private double _length { get; set; }
+    public string ID { get; }
+
 
     public Wire()
     {
