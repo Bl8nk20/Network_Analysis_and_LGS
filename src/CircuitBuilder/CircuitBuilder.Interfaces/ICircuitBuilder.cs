@@ -5,7 +5,11 @@ namespace Network_Analysis_and_LGS.CircuitBuilder;
 
 public interface ICircuitBuilder
 {
-    public ICircuitBuilder AddResistor(IBaseComponent resistor);
-    public ICircuitBuilder ConnectComponents(IBaseComponent componentA, IBaseComponent componentB);
-    public ICircuit Build();
+    ICircuitBuilder AddNode(INetworkNode node);
+
+    ICircuitBuilder AddComponent(ICircuitComponent component, 
+                                 INetworkNode node1, 
+                                 INetworkNode node2);
+
+    ICircuit Build();
 }

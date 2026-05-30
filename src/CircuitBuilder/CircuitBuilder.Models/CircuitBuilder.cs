@@ -6,25 +6,26 @@ namespace Network_Analysis_and_LGS.CircuitBuilder;
 
 public class CircuitBuilder : ICircuitBuilder
 {
-    private readonly IGraphBuilder<IBaseComponent> _circuitGraph;
-    
-    public CircuitBuilder()
-    {
-        _circuitGraph = new GraphBuilder<IBaseComponent>();
+    private readonly IGraphBuilder<INetworkNode> _graphBuilder;
+
+    public CircuitBuilder(){
+        _graphBuilder = new GraphBuilder<INetworkNode>();
     }
 
-    public ICircuitBuilder AddResistor(IBaseComponent resistor)
-    {
-        throw new NotImplementedException();
+    public ICircuitBuilder AddNode(INetworkNode node){
+        _graphBuilder.AddNode(node);
+        return this;
     }
 
-    public ICircuitBuilder ConnectComponents(IBaseComponent componentA, IBaseComponent componentB)
-    {
-        throw new NotImplementedException();
+    public ICircuitBuilder AddComponent(ICircuitComponent component, 
+                                        INetworkNode node1, 
+                                        INetworkNode node2){
+        _graphBuilder.AddEdge(node1, node2, component);
+        return this;
     }
 
-    public ICircuit Build()
-    {
-        throw new NotImplementedException();
+    public ICircuit Build(){
+        var _graph = _graphBuilder.Build();
+        return new Circuit(_graph);
     }
 }

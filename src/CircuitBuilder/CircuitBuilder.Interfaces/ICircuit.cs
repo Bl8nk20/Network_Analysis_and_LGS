@@ -5,11 +5,14 @@ namespace Network_Analysis_and_LGS.CircuitBuilder;
 
 public interface ICircuit
 {
-    public IReadOnlyCollection<INode<IBaseComponent>> Nodes { get; }
-    public IReadOnlyCollection<IEdge<IBaseComponent>> Edges { get; }
+    public IReadOnlyCollection<INode<INetworkNode>> Nodes { get; }
+    public IReadOnlyCollection<IEdge<INetworkNode>> Edges { get; }
 
-    public IEnumerable<INode<IBaseComponent>> GetNeighbors(INode<IBaseComponent> node);
+    public IEnumerable<INode<INetworkNode>> GetNeighbors(INetworkNode node);
+    public IReadOnlyCollection<IEdge<INetworkNode>> GetComponentsBetween(INetworkNode nodeA,
+                                                                         INetworkNode nodeB);
 
-    public double CalculateTotalResistance();
+    public double GetEquivalentResistance(INetworkNode nodeA, 
+                                          INetworkNode nodeB);
     public bool isSolveable();
 }
