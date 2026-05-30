@@ -1,17 +1,15 @@
-using Network_Analysis_and_LGS.ElectricalComponents;
+using Network_Analysis_and_LGS.AbstractLayer.Enums;
 
-namespace Network_Analysis_and_LGS.ElectricalComponents.Models;
+namespace Network_Analysis_and_LGS.ElectricalComponents.BasicComponents;
 
 public class Wire : IWire
 {
-
-    private double _resistance { get; set; }
-    private double _area { get; set; }
-    private double _length { get; set; }
-    public string ID { get; }
-
     private double _crossSectionArea;
-    private double _resistivity; // Material-spezifisch
+    private double _resistivity;
+    private double _length;
+
+    public string ID { get; }
+    public ComponentType Type => ComponentType.Wire;
 
     public double Length
     {
@@ -27,13 +25,11 @@ public class Wire : IWire
 
     public Wire(double length, double crossSectionArea, double resistivity = 0.0175)
     {
+        ID = Guid.NewGuid().ToString();
         Length = length;
         CrossSectionArea = crossSectionArea;
         _resistivity = resistivity;
     }
 
-    /// <summary>
-    /// Calculates resistance using R = ρ * L / A
-    /// </summary>
     public double GetResistance() => _resistivity * Length / CrossSectionArea;
 }

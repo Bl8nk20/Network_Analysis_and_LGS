@@ -1,9 +1,11 @@
-﻿using Network_Analysis_and_LGS.ElectricalComponents.Enums;
+﻿using Network_Analysis_and_LGS.AbstractLayer;
+using Network_Analysis_and_LGS.AbstractLayer.Enums;
+using Network_Analysis_and_LGS.ElectricalComponents.Enums;
 using Network_Analysis_and_LGS.ElectricalComponents.Validators;
 
-namespace Network_Analysis_and_LGS.ElectricalComponents.Models;
+namespace Network_Analysis_and_LGS.ElectricalComponents.BasicComponents;
 
-public class BaseResistor : IBaseResistor
+public class Resistor : IResistor
 {
     private readonly IValidator _validator;
     private double _resistance = 0.0;
@@ -12,8 +14,9 @@ public class BaseResistor : IBaseResistor
     private Tolerance _fourthBand = Tolerance.Brown;
     private AllowedVoltage _fifthBand = AllowedVoltage.NoColor;
     private TempCoefficient _sixthBand = TempCoefficient.Grey;
-    public string ID { get; }
 
+    public string ID { get; }
+    public ComponentType Type => ComponentType.Resistor;
 
     public SignificantFigures[] FirstTwoBands
     {
@@ -45,35 +48,30 @@ public class BaseResistor : IBaseResistor
         set => _sixthBand = ValidateOrThrow<TempCoefficient>(value, "Sixth band invalid");
     }
 
-    public double Resistance    {
+    public double Resistance
+    {
         get => _resistance;
         set => _resistance = ValidateOrThrow<double>(value, "Resistance value invalid");
     }
 
-    public BaseResistor(IValidator validator)
+    public Resistor(IValidator validator)
     {
         _validator = validator;
+        ID = Guid.NewGuid().ToString();
     }
 
-    public BaseResistor(IValidator validator, string alphanumericalCode)
+    public Resistor(IValidator validator, double resistance) : this(validator)
     {
-        _validator = validator;
-    }
-
-    public BaseResistor(IValidator validator, double resistance)
-    {
-        _validator = validator;
         _resistance = resistance;
     }
 
-    public BaseResistor(IValidator validator, 
-                        Enums.SignificantFigures[] firsttwoBands,
-                        Enums.Multiplier thirdBand, 
-                        Enums.Tolerance fourthBand, 
-                        Enums.AllowedVoltage fifthBand = Enums.AllowedVoltage.NoColor, 
-                        Enums.TempCoefficient sixthBand = Enums.TempCoefficient.Grey)
+    public Resistor(IValidator validator,
+                        SignificantFigures[] firsttwoBands,
+                        Multiplier thirdBand,
+                        Tolerance fourthBand,
+                        AllowedVoltage fifthBand = AllowedVoltage.NoColor,
+                        TempCoefficient sixthBand = TempCoefficient.Grey) : this(validator)
     {
-        _validator = validator; 
         _firsttwoBands = firsttwoBands;
         _thirdBand = thirdBand;
         _fourthBand = fourthBand;
@@ -81,14 +79,12 @@ public class BaseResistor : IBaseResistor
         _sixthBand = sixthBand;
     }
 
-    #region Private Methods
-        
+    public double GetResistance() => _resistance;
+
     private T ValidateOrThrow<T>(T value, string message)
     {
         if (!_validator.Validate(value))
             throw new ArgumentException(message);
         return value;
     }
-
-    #endregion
 }
