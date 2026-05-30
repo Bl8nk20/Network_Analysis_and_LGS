@@ -26,6 +26,16 @@ public class GraphBuilder<T> : IGraphBuilder<T>
         return this;
     }
 
+    public IGraphBuilder<T> AddEdge(T valueA, T valueB, T? value)
+    {
+        var nodeA = AddNode(valueA);
+        var nodeB = AddNode(valueB);
+
+        _edges.Add(new Edge<T>(nodeA, nodeB, value));
+
+        return this;
+    }
+
     public IGraph<T> Build()
     {
         return new Graph<T>(_nodes.Values.ToList(), _edges.ToList());

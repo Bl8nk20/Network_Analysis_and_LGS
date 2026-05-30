@@ -6,5 +6,7 @@ public interface IGraphBuilder<T>
 {
     public Node<T> AddNode(T value);
     public IGraphBuilder<T> AddEdge(T valueA, T valueB);
+    public IGraphBuilder<T> AddEdge(T valueA, T valueB, T? value);
+    
     public IGraph<T> Build();
 }

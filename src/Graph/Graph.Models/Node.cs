@@ -2,9 +2,9 @@ namespace Network_Analysis_and_LGS.Graph.Models;
 
 public class Node<T> : INode<T>
 {
-    public T Value { get; set; }
+    public T? Value { get; set; }
 
-    public Node(T value)
+    public Node(T? value)
     {
         Value = value;
     }
