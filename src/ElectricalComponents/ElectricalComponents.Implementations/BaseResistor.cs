@@ -1,10 +1,9 @@
-﻿using Network_Analysis_and_LGS.ElectricalComponents.Interfaces;
-using Network_Analysis_and_LGS.ElectricalComponents.Enums;
-using Network_Analysis_and_LGS.ElectricalComponents.Validator;
+﻿using Network_Analysis_and_LGS.ElectricalComponents.Enums;
+using Network_Analysis_and_LGS.ElectricalComponents.Validators;
 
-namespace Network_Analysis_and_LGS.ElectricalComponents.Implementations;
+namespace Network_Analysis_and_LGS.ElectricalComponents.Models;
 
-public class BaseResistor : Interfaces.IBaseResistor
+public class BaseResistor : IBaseResistor
 {
     private readonly IValidator _validator;
     private double _resistance = 0.0;

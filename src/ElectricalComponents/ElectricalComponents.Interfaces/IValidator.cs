@@ -1,4 +1,4 @@
-namespace Network_Analysis_and_LGS.ElectricalComponents.Interfaces
+namespace Network_Analysis_and_LGS.ElectricalComponents.Validators
 {
     public interface IValidator
     {

@@ -1,6 +1,6 @@
-using Network_Analysis_and_LGS.ElectricalComponents.Interfaces;
+using Network_Analysis_and_LGS.ElectricalComponents;
 
-namespace Network_Analysis_and_LGS.ElectricalComponents.Implementations;
+namespace Network_Analysis_and_LGS.ElectricalComponents.Models;
 
 public class Wire : IWire
 {
