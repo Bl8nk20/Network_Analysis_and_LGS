@@ -1,8 +1,8 @@
-using Network_Analysis_and_LGS.ElectricalComponents.Interfaces;
+using Network_Analysis_and_LGS.ElectricalComponents;
 
-namespace Network_Analysis_and_LGS.ElectricalComponents.Validator;
+namespace Network_Analysis_and_LGS.ElectricalComponents.Validators;
 
-public class ResistanceValidator : Interfaces.IValidator
+public class ResistanceValidator : IValidator
 {
     public bool Validate(object value){
         throw new NotImplementedException();

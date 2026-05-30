@@ -4,81 +4,165 @@ namespace Network_Analysis_and_LGS.ElectricalComponents.Enums
     /// This enum is used to determine the temperature coefficient of a resistor based on the color code of the sixth band.
     /// </summary>
     public enum TempCoefficient{
-        Black = 250,
-        Brown = 100,
-        Red = 50,
-        Orange = 15,
-        Yellow = 25,
-        Green = 20,
-        Blue = 10,
-        Violet = 5,
-        Grey = 1
+        Black,
+        Brown,
+        Red,
+        Orange,
+        Yellow,
+        Green,
+        Blue,
+        Violet,
+        Grey
     }
 
     /// <summary>
     /// This enum is used to determine the maximum voltage of a resistor based on the color code of the fifth band.
     /// </summary>
     public enum AllowedVoltage{
-        Brown = 100,
-        Red = 200,
-        Orange = 300,
-        Yellow = 400,
-        Green = 500,
-        Blue = 600,
-        Violet = 700,
-        Grey = 800,
-        White = 900,
-        Gold = 1000,
-        Silver = 2000,
-        NoColor = 500
+        Brown,
+        Red,
+        Orange,
+        Yellow,
+        Green,
+        Blue,
+        Violet,
+        Grey,
+        White,
+        Gold,
+        Silver,
+        NoColor
     }
 
     /// <summary>
     /// This enum is used to determine the significant figures of a resistor based on the color code of the first two bands.
     /// </summary>
     public enum SignificantFigures{
-        Black = 0,
-        Brown = 1,
-        Red = 2,
-        Orange = 3,
-        Yellow = 4,
-        Green = 5,
-        Blue = 6,
-        Violet = 7,
-        Grey = 8,
-        White = 9
+        Black,
+        Brown,
+        Red,
+        Orange,
+        Yellow,
+        Green,
+        Blue,
+        Violet,
+        Grey,
+        White
     }
 
     /// <summary>
     /// This enum is used to determine the tolerance of a resistor based on the color code of the fourth band.
     /// </summary>
-    public struct Tolerance{
-        public const double Brown = 1;
-        public const double Red = 2;
-        public const double Green = 0.5;
-        public const double Blue = 0.25;
-        public const double Violet = 0.1;
-        public const double Gold = 5;
-        public const double Silver = 10;
-        public const double NoColor = 20;
+    public enum Tolerance{
+        Brown,
+        Red,
+        Green,
+        Blue,
+        Violet,
+        Gold,
+        Silver,
+        NoColor
     }
 
     ///
     /// <summary>
     /// This enum is used to determine the multiplier of a resistor based on the color code of the third band.
     /// </summary>
-    public struct Multiplier{
-        public const double Black = 1;
-        public const double Brown = 10;
-        public const double Red = 100;
-        public const double Orange = 1000;
-        public const double Yellow = 10_000;
-        public const double Green = 100_000;
-        public const double Blue = 1_000_000; 
-        public const double Violet = 10_000_000;
-        public const double Grey = 100_000_000;
-        public const double White = 1_000_000_000;
-        public const double Gold = 0.1;
-        public const double Silver = 0.01;
+    public enum Multiplier{
+        Black,
+        Brown,
+        Red,
+        Orange,
+        Yellow,
+        Green,
+        Blue, 
+        Violet,
+        Grey,
+        White,
+        Gold,
+        Silver,
+    };
+
+    public static class ResistorExtensions{
+
+        public static double GetMultiplierValue(this Multiplier multiplier) 
+        => multiplier switch
+        {
+            Multiplier.Black => 1,
+            Multiplier.Brown => 10,
+            Multiplier.Red => 100,
+            Multiplier.Orange => 1000,
+            Multiplier.Yellow => 10_000,
+            Multiplier.Green => 100_000,
+            Multiplier.Blue => 1_000_000,
+            Multiplier.Violet => 10_000_000,
+            Multiplier.Grey => 100_000_000,
+            Multiplier.White => 1_000_000_000,
+            Multiplier.Gold => 0.1,
+            Multiplier.Silver => 0.01,
+            _ => throw new ArgumentOutOfRangeException(nameof(multiplier), multiplier, null)
+        };
+
+        public static double GetToleranceValue(this Tolerance tolerance)
+        => tolerance switch
+        {
+            Tolerance.Brown => 1,
+            Tolerance.Red => 2,
+            Tolerance.Green => 0.5,
+            Tolerance.Blue => 0.25,
+            Tolerance.Violet => 0.1,
+            Tolerance.Gold => 5,
+            Tolerance.Silver => 10,
+            Tolerance.NoColor => 20,
+            _ => throw new ArgumentOutOfRangeException(nameof(tolerance), tolerance, null)
+        };
+
+        public static double GetTempCoefficientValue(this TempCoefficient tempCoefficient)
+        => tempCoefficient switch
+        {            
+            TempCoefficient.Black => 250,
+            TempCoefficient.Brown => 100,
+            TempCoefficient.Red => 50,
+            TempCoefficient.Orange => 15,
+            TempCoefficient.Yellow => 25,
+            TempCoefficient.Green => 20,
+            TempCoefficient.Blue => 10,
+            TempCoefficient.Violet => 5,
+            TempCoefficient.Grey => 1,
+            _ => throw new ArgumentOutOfRangeException(nameof(tempCoefficient), tempCoefficient, null)
+        };
+
+        public static double GetAllowedVoltageValue(this AllowedVoltage allowedVoltage)
+        => allowedVoltage switch
+        {
+            AllowedVoltage.Brown => 100,
+            AllowedVoltage.Red => 200,
+            AllowedVoltage.Orange => 300,
+            AllowedVoltage.Yellow => 400,
+            AllowedVoltage.Green => 500,
+            AllowedVoltage.Blue => 600,
+            AllowedVoltage.Violet => 700,
+            AllowedVoltage.Grey => 800,
+            AllowedVoltage.White => 900,
+            AllowedVoltage.Gold => 1000,
+            AllowedVoltage.Silver => 2000,
+            AllowedVoltage.NoColor => 500,
+            _ => throw new ArgumentOutOfRangeException(nameof(allowedVoltage), allowedVoltage, null)
+        };
+
+        public static double GetSignificantFigureValue(this SignificantFigures significantFigure)
+        => significantFigure switch
+        {
+            SignificantFigures.Black => 0,
+            SignificantFigures.Brown => 1,
+            SignificantFigures.Red => 2,
+            SignificantFigures.Orange => 3,
+            SignificantFigures.Yellow => 4,
+            SignificantFigures.Green => 5,
+            SignificantFigures.Blue => 6,
+            SignificantFigures.Violet => 7,
+            SignificantFigures.Grey => 8,
+            SignificantFigures.White => 9,
+            _ => throw new ArgumentOutOfRangeException(nameof(significantFigure), significantFigure, null)
+        };
     }
 }
