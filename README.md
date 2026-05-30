@@ -40,6 +40,7 @@ Hier liste ich die Untergliederung der einzelnen Libraries auf, in die ich das "
 * DataReading
 * DataWriting
 * Maths
+* CircuitBuilder
 
 ## Zukunftsmusik
 
